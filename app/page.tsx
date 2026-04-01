@@ -37,6 +37,8 @@ const internalLinks = [
   { href: '/dhan77-login', label: 'Dhan77 Login' },
   { href: '/dhan77-bonus', label: 'Dhan77 Bonus' },
   { href: '/dhan77-review', label: 'Dhan77 Review' },
+  { href: '/blog', label: 'Dhan77 Blog' },
+  { href: '/faq', label: 'FAQ' },
 ]
 
 export default function HomePage() {
@@ -56,8 +58,8 @@ export default function HomePage() {
       {/* Hero */}
       <section className="flex flex-col items-center gap-6 text-center">
         <Image
-          src="/dhan77-logo.png"
-          alt="Dhan77 logo"
+          src="/dhan7.jpg"
+          alt="Dhan7 logo"
           width={120}
           height={120}
           priority

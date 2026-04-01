@@ -8,6 +8,7 @@ const navLinks = [
   { href: '/dhan77-bonus', label: 'Bonus' },
   { href: '/dhan77-review', label: 'Review' },
   { href: '/faq', label: 'FAQ' },
+  { href: '/blog', label: 'Blog' },
 ]
 
 export default function Header() {
@@ -17,8 +18,8 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
-            src="/dhan77-logo.png"
-            alt="Dhan77 Logo"
+            src="/dhan7.jpg"
+            alt="Dhan7 Logo"
             width={48}
             height={48}
             className="rounded"

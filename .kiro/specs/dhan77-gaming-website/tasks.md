@@ -28,9 +28,9 @@ Build a mobile-first, SEO-optimised Next.js 16 (App Router) marketing site for t
     - **Validates: Requirements 1.6**
 
   - [x] 3.3 Create `app/_components/Header.tsx`
-    - Renders site logo (`/dhan77-logo.png` via `next/image`) and `<Link>` nav items for all six pages: `/`, `/dhan77-apk-download`, `/dhan77-login`, `/dhan77-bonus`, `/dhan77-review`, `/faq`
+    - Renders site logo (`/dhan7.jpg` via `next/image`) and `<Link>` nav items for all six pages: `/`, `/dhan77-apk-download`, `/dhan77-login`, `/dhan77-bonus`, `/dhan77-review`, `/faq`
     - Mobile-first responsive layout (hamburger or stacked nav on small screens)
-    - _Requirements: 1.3, 1.5_
+    - _Requirements: 1.3, 1.5, 12.1_
 
   - [x] 3.4 Write property test for Header (Property 1)
     - **Property 1: For any render of Header, all six nav hrefs are present**
@@ -53,7 +53,7 @@ Build a mobile-first, SEO-optimised Next.js 16 (App Router) marketing site for t
 
 - [x] 5. Home page (`app/page.tsx`)
   - [x] 5.1 Implement all page sections
-    - Hero: logo image, h1 "Dhan77 Gaming App", subheading, `<CTAButton />`
+    - Hero: logo image (`/dhan7.jpg`), h1 "Dhan77 Gaming App", subheading, `<CTAButton />`
     - "What is Dhan77" section describing the platform and game types
     - Screenshots section: all seven `next/image` components for `/dhan7-1.jpeg` through `/dhan7-7.jpeg` with descriptive alt text
     - Features section: instant withdrawal, ₹777 bonus, referral income, fast gameplay, secure system
@@ -173,3 +173,22 @@ Build a mobile-first, SEO-optimised Next.js 16 (App Router) marketing site for t
 - Vitest does not support async Server Components; test page components as synchronous functions
 - `NEXT_PUBLIC_SITE_URL` is inlined at build time — set it before running `next build`
 - All canonical paths can be relative strings (e.g. `'/dhan77-apk-download'`) because `metadataBase` is set in the root layout
+
+- [x] 16. Update logo and favicon to use `dhan7.jpg`
+  - [x] 16.1 Update `app/_components/Header.tsx`
+    - Change `src` from `/dhan77-logo.png` to `/dhan7.jpg`
+    - Update `alt` to `"Dhan7 Logo"`
+    - _Requirements: 12.1_
+
+  - [x] 16.2 Update `app/page.tsx` Hero section
+    - Change logo `src` from `/dhan77-logo.png` to `/dhan7.jpg`
+    - Update `alt` to `"Dhan7 logo"`
+    - _Requirements: 12.2, 3.1_
+
+  - [x] 16.3 Update `app/layout.tsx` favicon metadata
+    - Change `icons.icon` and `icons.apple` from `/dhan77-logo.png` to `/dhan7.jpg`
+    - _Requirements: 12.3, 12.4_
+
+  - [x] 16.4 Replace `app/favicon.ico` with a copy of `dhan7.jpg`
+    - Copy `public/dhan7.jpg` to `app/favicon.ico` (or configure Next.js to serve `/dhan7.jpg` as the favicon)
+    - _Requirements: 12.4_

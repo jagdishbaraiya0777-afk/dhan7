@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import CTAButton from '../_components/CTAButton'
 
 export const metadata: Metadata = {
@@ -54,6 +55,27 @@ export default function BonusPage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="flex flex-col gap-3 pt-4 border-t border-(--color-accent-red)">
+        <p className="text-(--color-text-muted) text-sm">Also see</p>
+        <div className="flex flex-wrap gap-3">
+          {[
+            { href: '/dhan77-apk-download', label: 'APK Download' },
+            { href: '/dhan77-login', label: 'Login Guide' },
+            { href: '/dhan77-review', label: 'App Review' },
+            { href: '/faq', label: 'FAQ' },
+            { href: '/blog', label: 'Blog' },
+          ].map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="text-xs border border-(--color-accent-red) text-(--color-accent-red) px-3 py-1.5 rounded hover:bg-(--color-accent-red) hover:text-white transition-colors"
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
       </section>
     </main>
   )

@@ -15,6 +15,8 @@ Dhan77 Gaming Website is a mobile-first, SEO-optimized Next.js marketing site fo
 - **Schema**: JSON-LD structured data embedded in page `<head>`
 - **Sitemap**: The XML sitemap served at `/sitemap.xml`
 - **NEXT_PUBLIC_SITE_URL**: Environment variable set to `https://dhan77apkdownload.com`
+- **Logo_Image**: The file `/dhan7.jpg` located in the `public` folder, used as the site logo everywhere
+- **Favicon**: The browser tab icon derived from the Logo_Image
 
 ---
 
@@ -28,7 +30,7 @@ Dhan77 Gaming Website is a mobile-first, SEO-optimized Next.js marketing site fo
 
 1. THE Layout SHALL apply a dark background color of `#0f0f0f` to all pages.
 2. THE Layout SHALL use `#ff2e63` (red) and `#f5c542` (gold) as the primary accent colors throughout all pages.
-3. THE Layout SHALL render a Header with site navigation links to all six pages on every page.
+3. THE Layout SHALL render a Header displaying the Logo_Image and site navigation links to all six pages on every page.
 4. THE Layout SHALL render a Footer on every page containing related site links to `https://comegameapp.com` and `https://goplay11-apk.com`.
 5. THE Layout SHALL be mobile-first, with responsive breakpoints ensuring usability on screens 320px wide and above.
 6. THE CTA_Button SHALL open the Download_Link in a new browser tab with `rel="nofollow sponsored"` on every page where it appears.
@@ -56,7 +58,7 @@ Dhan77 Gaming Website is a mobile-first, SEO-optimized Next.js marketing site fo
 
 #### Acceptance Criteria
 
-1. THE Home_Page SHALL render a Hero section containing the `/dhan77-logo.png` image, the heading "Dhan77 Gaming App", the subheading "Play Games & Earn Real Money Instantly", and a CTA_Button.
+1. THE Home_Page SHALL render a Hero section containing the `/dhan7.jpg` image, the heading "Dhan77 Gaming App", the subheading "Play Games & Earn Real Money Instantly", and a CTA_Button.
 2. THE Home_Page SHALL render a "What is Dhan77" section describing Dhan77 as a real-money gaming platform with games including casino, crash, slots, and fishing.
 3. THE Home_Page SHALL render a Screenshots section displaying all seven images (`/dhan7-1.jpeg` through `/dhan7-7.jpeg`) with descriptive alt text.
 4. THE Home_Page SHALL render a Features section listing: instant withdrawal, ₹777 bonus, referral income, fast gameplay, and secure system.
@@ -164,3 +166,17 @@ Dhan77 Gaming Website is a mobile-first, SEO-optimized Next.js marketing site fo
 
 1. THE Website SHALL read the site domain exclusively from the `NEXT_PUBLIC_SITE_URL` environment variable in all canonical URLs, schema URLs, and sitemap entries.
 2. IF the `NEXT_PUBLIC_SITE_URL` environment variable is not set, THEN THE Website SHALL fall back to `https://dhan77apkdownload.com` as the default value.
+
+---
+
+### Requirement 12: Logo and Favicon
+
+**User Story:** As a site owner, I want the site logo and favicon to use `dhan7.jpg`, so that the brand identity is consistent across the UI and browser tabs.
+
+#### Acceptance Criteria
+
+1. THE Header SHALL display the Logo_Image (`/dhan7.jpg`) as the site logo with `alt="Dhan7 Logo"` and dimensions of 48×48 pixels.
+2. THE Home_Page SHALL display the Logo_Image (`/dhan7.jpg`) in the Hero section with `alt="Dhan7 logo"` and dimensions of 120×120 pixels.
+3. THE Layout SHALL declare `/dhan7.jpg` as the `icon` and `apple` favicon in the page metadata `icons` field.
+4. WHEN a browser requests the favicon, THE Website SHALL serve the Logo_Image (`/dhan7.jpg`) as the site icon.
+5. THE Website SHALL use the Logo_Image (`/dhan7.jpg`) consistently in every location where a site logo or favicon is referenced, replacing any prior use of `/dhan77-logo.png` as a logo or favicon.
