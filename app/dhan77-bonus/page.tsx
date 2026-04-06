@@ -3,9 +3,27 @@ import Link from 'next/link'
 import CTAButton from '../_components/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'Dhan77 Bonus ₹777 Offer',
-  alternates: {
-    canonical: '/dhan77-bonus',
+  title: 'Dhan77 Bonus ₹777 Offer – Cashback & Referral Rewards 2026',
+  description:
+    'Claim Dhan77 ₹777 first deposit bonus, daily cashback, and referral rewards. Best bonus offers on Dhan7 gaming app 2026.',
+  keywords: [
+    'dhan77 bonus', 'dhan7 bonus', 'dhan 77 bonus offer',
+    'dhan77 777 bonus', 'dhan7 referral reward', 'dhan77 cashback 2026',
+  ],
+  alternates: { canonical: '/dhan77-bonus' },
+  openGraph: {
+    title: 'Dhan77 Bonus ₹777 Offer 2026',
+    description: 'Claim ₹777 first deposit bonus, daily cashback, and referral rewards on Dhan77.',
+    url: '/dhan77-bonus',
+    siteName: 'Dhan7.xyz',
+    type: 'website',
+    images: [{ url: '/dhan7.jpg', width: 512, height: 512, alt: 'Dhan7 Logo' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dhan77 Bonus ₹777 Offer 2026',
+    description: 'Claim ₹777 bonus, daily cashback, and referral rewards on Dhan77.',
+    images: ['/dhan7.jpg'],
   },
 }
 

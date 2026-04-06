@@ -2,9 +2,27 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Dhan77 Login Guide',
-  alternates: {
-    canonical: '/dhan77-login',
+  title: 'Dhan77 Login Guide 2026 – How to Login & Register',
+  description:
+    'Complete Dhan77 login guide 2026. Learn how to login, register, and secure your Dhan7 account. OTP verification steps included.',
+  keywords: [
+    'dhan77 login', 'dhan7 login', 'dhan 77 login',
+    'dhan7 register', 'dhan77 account login', 'dhan7 login guide 2026',
+  ],
+  alternates: { canonical: '/dhan77-login' },
+  openGraph: {
+    title: 'Dhan77 Login Guide 2026',
+    description: 'How to login and register on Dhan77. Step-by-step guide with OTP verification.',
+    url: '/dhan77-login',
+    siteName: 'Dhan7.xyz',
+    type: 'website',
+    images: [{ url: '/dhan7.jpg', width: 512, height: 512, alt: 'Dhan7 Logo' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dhan77 Login Guide 2026',
+    description: 'How to login and register on Dhan77. Step-by-step guide.',
+    images: ['/dhan7.jpg'],
   },
 }
 

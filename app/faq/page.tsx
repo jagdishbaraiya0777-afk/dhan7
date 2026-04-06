@@ -2,9 +2,27 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Dhan77 FAQ',
-  alternates: {
-    canonical: '/faq',
+  title: 'Dhan77 FAQ 2026 – Common Questions About Dhan7 App Answered',
+  description:
+    'Frequently asked questions about Dhan77 and Dhan7 app. Is it safe? How to download? Withdrawal rules? All answers here.',
+  keywords: [
+    'dhan77 faq', 'dhan7 questions', 'dhan 77 safe',
+    'dhan7 withdrawal faq', 'dhan77 how to download', 'dhan7 app questions 2026',
+  ],
+  alternates: { canonical: '/faq' },
+  openGraph: {
+    title: 'Dhan77 FAQ 2026 – All Questions Answered',
+    description: 'Is Dhan77 safe? How to download? Withdrawal rules? All Dhan7 FAQs answered.',
+    url: '/faq',
+    siteName: 'Dhan7.xyz',
+    type: 'website',
+    images: [{ url: '/dhan7.jpg', width: 512, height: 512, alt: 'Dhan7 Logo' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dhan77 FAQ 2026',
+    description: 'All common questions about Dhan77 and Dhan7 app answered.',
+    images: ['/dhan7.jpg'],
   },
 }
 
@@ -16,15 +34,27 @@ interface FAQItem {
 export const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'Is Dhan77 safe?',
-    answer: 'Yes, but play responsibly.',
+    answer: 'Yes, Dhan77 is safe when downloaded from official trusted sources. Always verify the APK source before installing. Play responsibly.',
   },
   {
-    question: 'How to download?',
-    answer: 'Use the download button.',
+    question: 'How to download Dhan77 APK?',
+    answer: 'Click the download button on this site, enable Unknown Sources in your Android settings, install the APK, and open the app.',
   },
   {
-    question: 'Minimum withdrawal?',
-    answer: 'Depends on current rules.',
+    question: 'What is the minimum withdrawal on Dhan77?',
+    answer: 'The minimum withdrawal amount depends on current platform rules. Check the app wallet section for the latest threshold.',
+  },
+  {
+    question: 'Is Dhan7 real or fake?',
+    answer: 'Dhan7 is a real gaming platform. However, earnings are not guaranteed and depend on your gameplay. Play responsibly.',
+  },
+  {
+    question: 'How to login to Dhan77?',
+    answer: 'Open the Dhan77 app, enter your registered mobile number, verify with OTP, and tap Login to access your account.',
+  },
+  {
+    question: 'What games are available on Dhan77?',
+    answer: 'Dhan77 offers Crash, Casino, Slots, and Fishing games — all with real money rewards.',
   },
 ]
 

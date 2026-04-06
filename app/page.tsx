@@ -6,9 +6,29 @@ import { siteUrl } from './_lib/siteUrl'
 import { DOWNLOAD_LINK } from './_lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Dhan77 APK Download | Dhan7 Gaming App',
-  alternates: {
-    canonical: '/',
+  title: 'Dhan77 APK Download | Dhan7 Gaming App – Earn Real Money 2026',
+  description:
+    'Download Dhan77 APK latest version 2026. Play Dhan7 real money games — Crash, Casino, Slots, Fishing. Get ₹777 bonus, instant withdrawal. Safe & official.',
+  keywords: [
+    'dhan77', 'dhan7', 'dhan 7', 'dhan 77',
+    'dhan77 apk download', 'dhan7 gaming app',
+    'dhan77 login', 'dhan77 bonus', 'dhan7 download',
+    'dhan77 real money app', 'dhan7 earn money',
+  ],
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Dhan77 APK Download | Dhan7 Gaming App',
+    description: 'Download Dhan77 APK and earn real money. ₹777 bonus, instant withdrawal, crash & casino games.',
+    url: '/',
+    siteName: 'Dhan7.xyz',
+    type: 'website',
+    images: [{ url: '/dhan7.jpg', width: 512, height: 512, alt: 'Dhan7 Logo' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dhan77 APK Download | Dhan7 Gaming App',
+    description: 'Download Dhan77 APK and earn real money. ₹777 bonus, instant withdrawal.',
+    images: ['/dhan7.jpg'],
   },
 }
 

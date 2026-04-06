@@ -3,9 +3,27 @@ import Link from 'next/link'
 import CTAButton from '../_components/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'Dhan77 APK Download (Latest Version)',
-  alternates: {
-    canonical: '/dhan77-apk-download',
+  title: 'Dhan77 APK Download (Latest Version 2026) – Official Guide',
+  description:
+    'Download Dhan77 APK latest version 2026 safely. Step-by-step install guide for Dhan7 gaming app on Android. No Play Store required.',
+  keywords: [
+    'dhan77 apk download', 'dhan7 apk', 'dhan 77 download',
+    'dhan7 download 2026', 'dhan77 install guide', 'dhan7 android apk',
+  ],
+  alternates: { canonical: '/dhan77-apk-download' },
+  openGraph: {
+    title: 'Dhan77 APK Download (Latest Version 2026)',
+    description: 'Download Dhan77 APK safely. Step-by-step install guide for Android.',
+    url: '/dhan77-apk-download',
+    siteName: 'Dhan7.xyz',
+    type: 'website',
+    images: [{ url: '/dhan7.jpg', width: 512, height: 512, alt: 'Dhan7 Logo' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dhan77 APK Download (Latest Version 2026)',
+    description: 'Download Dhan77 APK safely. Step-by-step install guide for Android.',
+    images: ['/dhan7.jpg'],
   },
 }
 

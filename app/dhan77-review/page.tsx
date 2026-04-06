@@ -2,9 +2,27 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Dhan77 Review – Real or Fake?',
-  alternates: {
-    canonical: '/dhan77-review',
+  title: 'Dhan77 Review 2026 – Real or Fake? Is Dhan7 Safe?',
+  description:
+    'Honest Dhan77 review 2026. Is Dhan7 real or fake? We cover pros, cons, withdrawal proof, safety, and our verdict. Read before downloading.',
+  keywords: [
+    'dhan77 review', 'dhan7 review', 'dhan 77 real or fake',
+    'is dhan7 safe', 'dhan77 legit', 'dhan7 withdrawal proof 2026',
+  ],
+  alternates: { canonical: '/dhan77-review' },
+  openGraph: {
+    title: 'Dhan77 Review 2026 – Real or Fake?',
+    description: 'Honest Dhan77 review. Is Dhan7 real or fake? Pros, cons, and withdrawal proof.',
+    url: '/dhan77-review',
+    siteName: 'Dhan7.xyz',
+    type: 'website',
+    images: [{ url: '/dhan7.jpg', width: 512, height: 512, alt: 'Dhan7 Logo' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dhan77 Review 2026 – Real or Fake?',
+    description: 'Honest Dhan77 review. Is Dhan7 real or fake? Pros, cons, and verdict.',
+    images: ['/dhan7.jpg'],
   },
 }
 
