@@ -12,3 +12,58 @@ body {
   background-color: #0f0f0f;
   color: #ffffff;
 }
+
+/* Markdown Content Styling */
+.markdown-content {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.markdown-content a {
+  word-break: break-word;
+}
+
+/* Better list styling */
+.markdown-content ul ul,
+.markdown-content ol ul,
+.markdown-content ul ol,
+.markdown-content ol ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+/* Code block scrolling */
+.markdown-content pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Table responsiveness */
+.markdown-content table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .markdown-content h1 {
+    font-size: 1.875rem;
+  }
+  
+  .markdown-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .markdown-content h3 {
+    font-size: 1.25rem;
+  }
+}

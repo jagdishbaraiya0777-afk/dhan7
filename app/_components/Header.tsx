@@ -26,7 +26,7 @@ export default function Header() {
             priority
           />
           <span className="text-(--color-accent-gold) font-bold text-lg leading-tight hidden sm:block">
-            Dhan77
+            Dhan7
           </span>
         </Link>
 

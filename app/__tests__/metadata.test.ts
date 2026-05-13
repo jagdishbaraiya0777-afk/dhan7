@@ -6,10 +6,10 @@ import { siteUrl } from '@/app/_lib/siteUrl'
 // Validates: Requirements 2.3, 2.6, 3.7, 4.5, 5.4, 6.4, 7.5, 8.3
 
 import { metadata as homeMetadata } from '../page'
-import { metadata as downloadMetadata } from '../dhan77-apk-download/page'
-import { metadata as loginMetadata } from '../dhan77-login/page'
-import { metadata as bonusMetadata } from '../dhan77-bonus/page'
-import { metadata as reviewMetadata } from '../dhan77-review/page'
+import { metadata as downloadMetadata } from '../dhan-7-apk-download/page'
+import { metadata as loginMetadata } from '../dhan-7-login/page'
+import { metadata as bonusMetadata } from '../dhan-7-bonus/page'
+import { metadata as reviewMetadata } from '../dhan-7-review/page'
 import { metadata as faqMetadata } from '../faq/page'
 
 const pages = [

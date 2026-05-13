@@ -2,7 +2,7 @@
 import * as fc from 'fast-check'
 import { render } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import DownloadPage from '../dhan77-apk-download/page'
+import DownloadPage from '../dhan-7-apk-download/page'
 import { DOWNLOAD_LINK } from '@/app/_lib/constants'
 
 // Validates: Requirements 4.3

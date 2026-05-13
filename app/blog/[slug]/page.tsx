@@ -80,16 +80,37 @@ export default async function BlogPostPage({
         })}
       />
 
-      <article className="prose prose-invert max-w-none mt-8
-        prose-headings:text-(--color-accent-gold)
-        prose-h1:text-3xl prose-h2:text-2xl
-        prose-p:text-(--color-text-muted)
-        prose-a:text-(--color-accent-red) prose-a:no-underline hover:prose-a:underline
-        prose-strong:text-(--color-text-primary)
-        prose-li:text-(--color-text-muted)
-        prose-blockquote:border-l-4 prose-blockquote:border-(--color-accent-red) prose-blockquote:text-(--color-text-muted)
-      ">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content_md}</ReactMarkdown>
+      <article className="markdown-content mt-8">
+        <ReactMarkdown 
+          remarkPlugins={[remarkGfm]}
+          components={{
+            h1: ({node, ...props}) => <h1 className="text-3xl md:text-4xl font-bold text-accent-gold mb-6 mt-8 leading-tight" {...props} />,
+            h2: ({node, ...props}) => <h2 className="text-2xl md:text-3xl font-bold text-accent-gold mb-4 mt-8 leading-tight" {...props} />,
+            h3: ({node, ...props}) => <h3 className="text-xl md:text-2xl font-semibold text-accent-gold mb-3 mt-6 leading-tight" {...props} />,
+            h4: ({node, ...props}) => <h4 className="text-lg md:text-xl font-semibold text-accent-gold mb-3 mt-4" {...props} />,
+            h5: ({node, ...props}) => <h5 className="text-base md:text-lg font-semibold text-accent-gold mb-2 mt-4" {...props} />,
+            h6: ({node, ...props}) => <h6 className="text-base font-semibold text-accent-gold mb-2 mt-4" {...props} />,
+            p: ({node, ...props}) => <p className="text-text-muted mb-4 leading-relaxed text-base md:text-lg" {...props} />,
+            a: ({node, ...props}) => <a className="text-accent-red hover:text-accent-gold underline transition-colors" {...props} />,
+            strong: ({node, ...props}) => <strong className="text-white font-semibold" {...props} />,
+            em: ({node, ...props}) => <em className="text-accent-gold italic" {...props} />,
+            ul: ({node, ...props}) => <ul className="list-disc list-inside mb-4 space-y-2 text-text-muted ml-4" {...props} />,
+            ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-4 space-y-2 text-text-muted ml-4" {...props} />,
+            li: ({node, ...props}) => <li className="text-text-muted leading-relaxed" {...props} />,
+            blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-accent-red pl-4 py-2 my-4 italic text-text-muted bg-[#1a1a1a] rounded-r" {...props} />,
+            code: ({node, inline, ...props}: any) => 
+              inline 
+                ? <code className="bg-[#1a1a1a] text-accent-gold px-2 py-1 rounded text-sm font-mono" {...props} />
+                : <code className="block bg-[#1a1a1a] text-accent-gold p-4 rounded my-4 overflow-x-auto text-sm font-mono" {...props} />,
+            pre: ({node, ...props}) => <pre className="bg-[#1a1a1a] rounded my-4 overflow-x-auto" {...props} />,
+            hr: ({node, ...props}) => <hr className="border-accent-red my-8" {...props} />,
+            table: ({node, ...props}) => <div className="overflow-x-auto my-4"><table className="min-w-full border border-accent-red" {...props} /></div>,
+            th: ({node, ...props}) => <th className="border border-accent-red px-4 py-2 bg-[#1a1a1a] text-accent-gold font-semibold" {...props} />,
+            td: ({node, ...props}) => <td className="border border-accent-red px-4 py-2 text-text-muted" {...props} />,
+          }}
+        >
+          {post.content_md}
+        </ReactMarkdown>
       </article>
 
       <aside className="mt-8 p-4 rounded-lg border border-(--color-accent-gold) bg-(--color-bg-base)">
