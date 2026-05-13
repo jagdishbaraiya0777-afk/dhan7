@@ -185,7 +185,7 @@ export default function HomePage() {
         {/* Hero */}
         <section className="flex flex-col items-center gap-6 text-center">
           <Image
-            src="/dhan77-logo.png"
+            src="/dhan7.jpg"
             alt="Dhan 7 logo"
             width={120}
             height={120}

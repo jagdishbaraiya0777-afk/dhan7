@@ -1,4 +1,7 @@
 {
+  "buildCommand": "npm run build",
+  "framework": "nextjs",
+  "regions": ["sin1"],
   "crons": [
     {
       "path": "/api/generate-blog",

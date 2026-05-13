@@ -28,14 +28,21 @@ export const metadata: Metadata = {
   authors: [{ name: 'Dhan7.xyz' }],
   creator: 'Dhan7.xyz',
   publisher: 'Dhan7.xyz',
+  manifest: '/manifest.json',
   robots: {
     index: true,
     follow: true,
     googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
   },
   icons: {
-    icon: '/dhan77-logo.png',
-    apple: '/dhan77-logo.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   openGraph: {
     type: 'website',
@@ -44,14 +51,14 @@ export const metadata: Metadata = {
     title: 'Dhan 7 App — Download Dhan 7 APK | Official Dhan 7 Gaming App',
     description:
       'Download Dhan 7 app for Android. Official Dhan 7 app download — play real-money games, get 777 bonus, instant withdrawals.',
-    images: [{ url: '/dhan77-logo.png', width: 512, height: 512, alt: 'Dhan 7 App Logo' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'Dhan 7 App Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
     site: '@dhan7xyz',
     title: 'Dhan 7 App — Download Dhan 7 APK',
     description: 'Download Dhan 7 app (Dhan7 APK) for Android. Free Dhan 7 APK download.',
-    images: ['/dhan77-logo.png'],
+    images: ['/icon-512.png'],
   },
 }
 
