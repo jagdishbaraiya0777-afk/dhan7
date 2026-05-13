@@ -2,27 +2,33 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Dhan77 FAQ 2026 – Common Questions About Dhan7 App Answered',
+  title: 'Dhan 7 FAQ — Frequently Asked Questions | Dhan7.xyz',
   description:
-    'Frequently asked questions about Dhan77 and Dhan7 app. Is it safe? How to download? Withdrawal rules? All answers here.',
+    'Frequently asked questions about the Dhan 7 app. Covers download, login, withdrawal, bonuses, and account issues. Quick answers for all Dhan77 questions in 2026.',
   keywords: [
-    'dhan77 faq', 'dhan7 questions', 'dhan 77 safe',
-    'dhan7 withdrawal faq', 'dhan77 how to download', 'dhan7 app questions 2026',
+    'dhan 7 faq',
+    'dhan77 questions',
+    'dhan 7 help',
+    'dhan77 withdrawal faq',
+    'dhan 7 login help',
+    'dhan77 app support',
+    'dhan 7 customer care',
   ],
   alternates: { canonical: '/faq' },
   openGraph: {
-    title: 'Dhan77 FAQ 2026 – All Questions Answered',
-    description: 'Is Dhan77 safe? How to download? Withdrawal rules? All Dhan7 FAQs answered.',
+    title: 'Dhan 7 FAQ — Frequently Asked Questions | Dhan7.xyz',
+    description: 'Frequently asked questions about the Dhan 7 app. Covers download, login, withdrawal, bonuses, and account issues. Quick answers for all Dhan77 questions in 2026.',
     url: '/faq',
     siteName: 'Dhan7.xyz',
+    locale: 'en_IN',
     type: 'website',
-    images: [{ url: '/dhan7.jpg', width: 512, height: 512, alt: 'Dhan7 Logo' }],
+    images: [{ url: '/dhan77-logo.png', width: 512, height: 512, alt: 'Dhan7 Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dhan77 FAQ 2026',
-    description: 'All common questions about Dhan77 and Dhan7 app answered.',
-    images: ['/dhan7.jpg'],
+    title: 'Dhan 7 FAQ — Frequently Asked Questions',
+    description: 'Quick answers for all Dhan77 questions in 2026.',
+    images: ['/dhan77-logo.png'],
   },
 }
 

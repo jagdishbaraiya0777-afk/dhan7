@@ -5,6 +5,8 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { getAllPosts, getPostBySlug, runMigrations } from '../../../lib/db'
 import type { FAQ } from '../../../lib/types'
+import { BlogSchema } from '@/app/_components/BlogSchema'
+import { AuthorBlock } from '@/app/_components/AuthorBlock'
 
 export const revalidate = 3600
 
@@ -56,27 +58,29 @@ export default async function BlogPostPage({
 
   const faqs = parseFaqsFromMarkdown(post.content_md)
 
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-    })),
-  }
-
   return (
     <main className="flex-1 px-4 py-10 max-w-3xl mx-auto w-full">
-      {faqs.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqJsonLd).replace(/</g, '\\u003c'),
-          }}
-        />
-      )}
-      <article className="prose prose-invert max-w-none
+      <BlogSchema
+        title={post.meta_title}
+        description={post.meta_description}
+        slug={slug}
+        datePublished={post.created_at.toISOString().split('T')[0]}
+        dateModified={post.created_at.toISOString().split('T')[0]}
+        authorName="Dhan7 Editorial Team"
+        faqs={faqs}
+      />
+      
+      <AuthorBlock
+        name="Dhan7 Editorial Team"
+        bio="Expert writers covering real-money gaming apps and mobile gaming platforms in India since 2022."
+        date={post.created_at.toLocaleDateString('en-IN', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}
+      />
+
+      <article className="prose prose-invert max-w-none mt-8
         prose-headings:text-(--color-accent-gold)
         prose-h1:text-3xl prose-h2:text-2xl
         prose-p:text-(--color-text-muted)
@@ -87,16 +91,14 @@ export default async function BlogPostPage({
       ">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content_md}</ReactMarkdown>
       </article>
-      <p className="text-(--color-text-muted) text-xs mt-8">
-        Published:{' '}
-        <time dateTime={post.created_at.toISOString()}>
-          {post.created_at.toLocaleDateString('en-IN', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          })}
-        </time>
-      </p>
+
+      <aside className="mt-8 p-4 rounded-lg border border-(--color-accent-gold) bg-(--color-bg-base)">
+        <p className="text-(--color-text-muted) text-sm">
+          <strong className="text-(--color-accent-gold)">Disclaimer:</strong> The Dhan 7 app involves real-money gaming.
+          This content is for informational purposes only. 18+ only. Play responsibly. 
+          See our full <Link href="/terms-and-conditions" className="text-(--color-accent-gold) hover:underline">terms and conditions</Link>.
+        </p>
+      </aside>
 
       <div className="mt-10 pt-6 border-t border-(--color-accent-red) flex flex-col gap-3">
         <p className="text-(--color-text-muted) text-sm">Also see</p>

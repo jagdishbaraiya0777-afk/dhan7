@@ -13,8 +13,9 @@ function getSql(): NeonQueryFunction<false, false> {
 }
 
 export async function runMigrations(): Promise<void> {
-  const sql = getSql()
-  await sql`
+  try {
+    const sql = getSql()
+    await sql`
     CREATE TABLE IF NOT EXISTS blogs (
       id              SERIAL PRIMARY KEY,
       title           TEXT        NOT NULL,
@@ -26,26 +27,39 @@ export async function runMigrations(): Promise<void> {
       created_at      TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP
     )
   `
-  await sql`
+    await sql`
     CREATE TABLE IF NOT EXISTS keyword_usage (
       keyword         TEXT        PRIMARY KEY,
       used_at         TIMESTAMP   NOT NULL,
       use_count       INTEGER     NOT NULL DEFAULT 1
     )
   `
+  } catch (error) {
+    console.warn('Failed to run migrations:', error)
+  }
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
-  const sql = getSql()
-  const rows = await sql`SELECT * FROM blogs WHERE slug = ${slug} LIMIT 1`
-  if (rows.length === 0) return null
-  return rowToBlogPost(rows[0] as Record<string, unknown>)
+  try {
+    const sql = getSql()
+    const rows = await sql`SELECT * FROM blogs WHERE slug = ${slug} LIMIT 1`
+    if (rows.length === 0) return null
+    return rowToBlogPost(rows[0] as Record<string, unknown>)
+  } catch (error) {
+    console.warn('Failed to fetch blog post from database:', error)
+    return null
+  }
 }
 
 export async function getAllPosts(): Promise<BlogPost[]> {
-  const sql = getSql()
-  const rows = await sql`SELECT * FROM blogs ORDER BY created_at DESC`
-  return rows.map((r) => rowToBlogPost(r as Record<string, unknown>))
+  try {
+    const sql = getSql()
+    const rows = await sql`SELECT * FROM blogs ORDER BY created_at DESC`
+    return rows.map((r) => rowToBlogPost(r as Record<string, unknown>))
+  } catch (error) {
+    console.warn('Failed to fetch blog posts from database:', error)
+    return []
+  }
 }
 
 export async function insertPost(post: NewBlogPost): Promise<BlogPost> {
