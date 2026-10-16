@@ -2,27 +2,27 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Dhan77 Login Guide 2026 – How to Login & Register',
+  title: 'Dhan7 Login Guide 2026 – How to Login & Register',
   description:
-    'Complete Dhan77 login guide 2026. Learn how to login, register, and secure your Dhan7 account. OTP verification steps included.',
+    'Complete Dhan7 login guide 2026. Learn how to login, register, and secure your Dhan7 account. OTP verification steps included on dhan7.win.',
   keywords: [
-    'dhan77 login', 'dhan7 login', 'dhan 77 login',
-    'dhan7 register', 'dhan77 account login', 'dhan7 login guide 2026',
+    'dhan7 login', 'dhan 7 login', 'dhan7 register',
+    'dhan7 account login', 'dhan7 login guide 2026', 'dhan7 sign in',
   ],
-  alternates: { canonical: '/dhan77-login' },
+  alternates: { canonical: '/dhan7-login' },
   openGraph: {
-    title: 'Dhan77 Login Guide 2026',
-    description: 'How to login and register on Dhan77. Step-by-step guide with OTP verification.',
-    url: '/dhan77-login',
-    siteName: 'Dhan7.xyz',
+    title: 'Dhan7 Login Guide 2026',
+    description: 'How to login and register on Dhan7. Step-by-step guide with OTP verification.',
+    url: '/dhan7-login',
+    siteName: 'Dhan7',
     type: 'website',
-    images: [{ url: '/dhan7.jpg', width: 512, height: 512, alt: 'Dhan7 Logo' }],
+    images: [{ url: '/dhan77-logo.png', width: 512, height: 512, alt: 'Dhan7 Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dhan77 Login Guide 2026',
-    description: 'How to login and register on Dhan77. Step-by-step guide.',
-    images: ['/dhan7.jpg'],
+    title: 'Dhan7 Login Guide 2026',
+    description: 'How to login and register on Dhan7. Step-by-step guide on dhan7.win.',
+    images: ['/dhan77-logo.png'],
   },
 }
 
@@ -81,9 +81,9 @@ export default function LoginPage() {
         <p className="text-(--color-text-muted) text-sm">Also see</p>
         <div className="flex flex-wrap gap-3">
           {[
-            { href: '/dhan77-apk-download', label: 'APK Download' },
-            { href: '/dhan77-bonus', label: 'Bonus Offers' },
-            { href: '/dhan77-review', label: 'App Review' },
+            { href: '/dhan7-apk-download', label: 'APK Download' },
+            { href: '/dhan7-bonus', label: 'Bonus Offers' },
+            { href: '/dhan7-review', label: 'App Review' },
             { href: '/faq', label: 'FAQ' },
             { href: '/blog', label: 'Blog' },
           ].map(({ href, label }) => (

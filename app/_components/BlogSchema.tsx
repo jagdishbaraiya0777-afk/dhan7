@@ -1,3 +1,5 @@
+import { siteUrl } from '../_lib/siteUrl'
+
 interface FAQ {
   question: string
   answer: string
@@ -22,7 +24,8 @@ export function BlogSchema({
   authorName,
   faqs,
 }: BlogSchemaProps) {
-  const url = `https://www.dhan7.xyz/blog/${slug}`
+  const base = siteUrl()
+  const url = `${base}/blog/${slug}`
 
   const graph: object[] = [
     {
@@ -35,15 +38,15 @@ export function BlogSchema({
       author: {
         '@type': 'Person',
         name: authorName,
-        url: 'https://www.dhan7.xyz/about',
+        url: `${base}/about`,
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Dhan7.xyz',
-        url: 'https://www.dhan7.xyz',
+        name: 'Dhan7',
+        url: base,
         logo: {
           '@type': 'ImageObject',
-          url: 'https://www.dhan7.xyz/dhan77-logo.png',
+          url: `${base}/dhan77-logo.png`,
         },
       },
       mainEntityOfPage: {
@@ -52,7 +55,7 @@ export function BlogSchema({
       },
       image: {
         '@type': 'ImageObject',
-        url: 'https://www.dhan7.xyz/dhan77-logo.png',
+        url: `${base}/dhan77-logo.png`,
         width: 512,
         height: 512,
       },
@@ -64,13 +67,13 @@ export function BlogSchema({
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://www.dhan7.xyz',
+          item: base,
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Blog',
-          item: 'https://www.dhan7.xyz/blog',
+          item: `${base}/blog`,
         },
         { '@type': 'ListItem', position: 3, name: title, item: url },
       ],

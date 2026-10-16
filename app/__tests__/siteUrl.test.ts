@@ -4,11 +4,23 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest'
 
 // Validates: Requirements 11.2
 
-const FALLBACK = 'https://dhan77apkdownload.com'
+const FALLBACK = 'https://dhan7.win'
 
 // Test the siteUrl logic directly (mirrors the implementation)
 function siteUrlUnderTest(): string {
-  return process.env.NEXT_PUBLIC_SITE_URL ?? FALLBACK
+  const raw = process.env.NEXT_PUBLIC_SITE_URL ?? FALLBACK
+  try {
+    const parsed = new URL(raw)
+    if (parsed.hostname === 'www.dhan7.win') {
+      parsed.hostname = 'dhan7.win'
+    }
+    parsed.pathname = ''
+    parsed.search = ''
+    parsed.hash = ''
+    return parsed.origin
+  } catch {
+    return FALLBACK
+  }
 }
 
 describe('siteUrl – Property 12', () => {

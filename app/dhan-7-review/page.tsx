@@ -2,34 +2,34 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Dhan 7 Reviews 2026 – Complete Guide to Dhan 7 Game Reviews & Reality Check',
+  title: 'Dhan7 Reviews 2026 – Complete Guide to Dhan 7 Game Reviews & Reality Check',
   description:
-    'Honest Dhan 7 reviews 2026. Complete guide to dhan 7 game reviews, features, pros & cons, safety concerns, and reality check. Is Dhan 7 legit or risky? Read before downloading.',
+    'Honest Dhan7 reviews 2026. Complete guide to dhan7 game reviews, features, pros & cons, safety concerns, and reality check on dhan7.win.',
   keywords: [
-    'dhan 7 reviews',
-    'dhan 7 game reviews',
-    'dhan 7 review',
-    'is dhan 7 safe',
-    'dhan 7 real or fake',
-    'dhan 7 legit',
-    'dhan 7 game review 2026',
-    'dhan 7 app review',
+    'dhan7 reviews',
+    'dhan7 game reviews',
+    'dhan7 review',
+    'is dhan7 safe',
+    'dhan7 real or fake',
+    'dhan7 legit',
+    'dhan7 game review 2026',
+    'dhan7 app review',
   ],
-  alternates: { canonical: '/dhan77-review' },
+  alternates: { canonical: '/dhan7-review' },
   openGraph: {
-    title: 'Dhan 7 Reviews 2026 – Complete Guide & Reality Check',
-    description: 'Honest Dhan 7 reviews. Complete guide to features, pros, cons, safety concerns. Is Dhan 7 legit or risky?',
-    url: '/dhan77-review',
-    siteName: 'Dhan 7',
+    title: 'Dhan7 Reviews 2026 – Complete Guide & Reality Check',
+    description: 'Honest Dhan7 reviews. Complete guide to features, pros, cons, safety concerns.',
+    url: '/dhan7-review',
+    siteName: 'Dhan7',
     type: 'website',
     locale: 'en_IN',
-    images: [{ url: '/dhan7.jpg', width: 512, height: 512, alt: 'Dhan 7 Logo' }],
+    images: [{ url: '/dhan77-logo.png', width: 512, height: 512, alt: 'Dhan7 Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dhan 7 Reviews 2026 – Complete Guide',
-    description: 'Honest Dhan 7 reviews. Features, pros, cons, and reality check.',
-    images: ['/dhan7.jpg'],
+    title: 'Dhan7 Reviews 2026 – Complete Guide',
+    description: 'Honest Dhan7 reviews. Features, pros, cons, and reality check on dhan7.win.',
+    images: ['/dhan77-logo.png'],
   },
 }
 

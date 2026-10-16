@@ -39,27 +39,34 @@ export async function runMigrations(): Promise<void> {
   }
 }
 
+import { FALLBACK_BLOG_POSTS } from './fallback-blogs'
+
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   try {
     const sql = getSql()
     const rows = await sql`SELECT * FROM blogs WHERE slug = ${slug} LIMIT 1`
-    if (rows.length === 0) return null
-    return rowToBlogPost(rows[0] as Record<string, unknown>)
+    if (rows.length > 0) {
+      return rowToBlogPost(rows[0] as Record<string, unknown>)
+    }
   } catch (error) {
-    console.warn('Failed to fetch blog post from database:', error)
-    return null
+    console.warn('Database unavailable, checking fallback blog posts:', error)
   }
+  // Check static fallback posts
+  const fallback = FALLBACK_BLOG_POSTS.find((p) => p.slug === slug)
+  return fallback ?? null
 }
 
 export async function getAllPosts(): Promise<BlogPost[]> {
   try {
     const sql = getSql()
     const rows = await sql`SELECT * FROM blogs ORDER BY created_at DESC`
-    return rows.map((r) => rowToBlogPost(r as Record<string, unknown>))
+    if (rows.length > 0) {
+      return rows.map((r) => rowToBlogPost(r as Record<string, unknown>))
+    }
   } catch (error) {
-    console.warn('Failed to fetch blog posts from database:', error)
-    return []
+    console.warn('Database unavailable, returning fallback blog posts:', error)
   }
+  return FALLBACK_BLOG_POSTS
 }
 
 export async function insertPost(post: NewBlogPost): Promise<BlogPost> {
@@ -73,9 +80,14 @@ export async function insertPost(post: NewBlogPost): Promise<BlogPost> {
 }
 
 export async function slugExists(slug: string): Promise<boolean> {
-  const sql = getSql()
-  const rows = await sql`SELECT 1 FROM blogs WHERE slug = ${slug} LIMIT 1`
-  return rows.length > 0
+  try {
+    const sql = getSql()
+    const rows = await sql`SELECT 1 FROM blogs WHERE slug = ${slug} LIMIT 1`
+    if (rows.length > 0) return true
+  } catch (error) {
+    console.warn('Database unavailable during slug check:', error)
+  }
+  return FALLBACK_BLOG_POSTS.some((p) => p.slug === slug)
 }
 
 export async function getKeywordUsage(): Promise<KeywordUsage[]> {

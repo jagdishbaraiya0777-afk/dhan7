@@ -3,27 +3,27 @@ import Link from 'next/link'
 import CTAButton from '../_components/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'Dhan77 Bonus ₹777 Offer – Cashback & Referral Rewards 2026',
+  title: 'Dhan7 Bonus ₹777 Offer – Cashback & Referral Rewards 2026',
   description:
-    'Claim Dhan77 ₹777 first deposit bonus, daily cashback, and referral rewards. Best bonus offers on Dhan7 gaming app 2026.',
+    'Claim Dhan7 ₹777 first deposit bonus, daily cashback, and referral rewards. Best bonus offers on Dhan7 gaming app on dhan7.win.',
   keywords: [
-    'dhan77 bonus', 'dhan7 bonus', 'dhan 77 bonus offer',
-    'dhan77 777 bonus', 'dhan7 referral reward', 'dhan77 cashback 2026',
+    'dhan7 bonus', 'dhan 7 bonus', 'dhan7 bonus offer',
+    'dhan7 777 bonus', 'dhan7 referral reward', 'dhan7 cashback 2026',
   ],
-  alternates: { canonical: '/dhan77-bonus' },
+  alternates: { canonical: '/dhan7-bonus' },
   openGraph: {
-    title: 'Dhan77 Bonus ₹777 Offer 2026',
-    description: 'Claim ₹777 first deposit bonus, daily cashback, and referral rewards on Dhan77.',
-    url: '/dhan77-bonus',
-    siteName: 'Dhan7.xyz',
+    title: 'Dhan7 Bonus ₹777 Offer 2026',
+    description: 'Claim ₹777 first deposit bonus, daily cashback, and referral rewards on Dhan7.',
+    url: '/dhan7-bonus',
+    siteName: 'Dhan7',
     type: 'website',
-    images: [{ url: '/dhan7.jpg', width: 512, height: 512, alt: 'Dhan7 Logo' }],
+    images: [{ url: '/dhan77-logo.png', width: 512, height: 512, alt: 'Dhan7 Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dhan77 Bonus ₹777 Offer 2026',
-    description: 'Claim ₹777 bonus, daily cashback, and referral rewards on Dhan77.',
-    images: ['/dhan7.jpg'],
+    title: 'Dhan7 Bonus ₹777 Offer 2026',
+    description: 'Claim ₹777 bonus, daily cashback, and referral rewards on Dhan7.',
+    images: ['/dhan77-logo.png'],
   },
 }
 
@@ -79,9 +79,9 @@ export default function BonusPage() {
         <p className="text-(--color-text-muted) text-sm">Also see</p>
         <div className="flex flex-wrap gap-3">
           {[
-            { href: '/dhan77-apk-download', label: 'APK Download' },
-            { href: '/dhan77-login', label: 'Login Guide' },
-            { href: '/dhan77-review', label: 'App Review' },
+            { href: '/dhan7-apk-download', label: 'APK Download' },
+            { href: '/dhan7-login', label: 'Login Guide' },
+            { href: '/dhan7-review', label: 'App Review' },
             { href: '/faq', label: 'FAQ' },
             { href: '/blog', label: 'Blog' },
           ].map(({ href, label }) => (

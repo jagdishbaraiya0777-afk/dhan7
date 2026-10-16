@@ -1,9 +1,9 @@
 import { getAllPosts } from '../../lib/db'
 
-const HEADER = `# Dhan7 / Dhan77 — Real Money Gaming App
+const HEADER = `# Dhan7 — Real Money Gaming Portal (dhan7.win)
 
-> Dhan7 (also known as Dhan77) is a real-money gaming app available for Android.
-> This file lists published blog posts for AI crawlers.
+> Dhan7 (also known as Dhan 7) is India's leading real-money gaming app available for Android on https://dhan7.win.
+> This file lists published guides and resources for search engines and AI crawlers.
 
 `
 

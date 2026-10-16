@@ -3,27 +3,27 @@ import Link from 'next/link'
 import CTAButton from '../_components/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'Dhan77 APK Download (Latest Version 2026) – Official Guide',
+  title: 'Dhan7 APK Download (Latest Version 2026) – Official Guide',
   description:
-    'Download Dhan77 APK latest version 2026 safely. Step-by-step install guide for Dhan7 gaming app on Android. No Play Store required.',
+    'Download Dhan7 APK latest version 2026 safely. Step-by-step install guide for Dhan7 gaming app on Android. No Play Store required on dhan7.win.',
   keywords: [
-    'dhan77 apk download', 'dhan7 apk', 'dhan 77 download',
-    'dhan7 download 2026', 'dhan77 install guide', 'dhan7 android apk',
+    'dhan7 apk download', 'dhan7 apk', 'dhan 7 download',
+    'dhan7 download 2026', 'dhan7 install guide', 'dhan7 android apk',
   ],
-  alternates: { canonical: '/dhan77-apk-download' },
+  alternates: { canonical: '/dhan7-apk-download' },
   openGraph: {
-    title: 'Dhan77 APK Download (Latest Version 2026)',
-    description: 'Download Dhan77 APK safely. Step-by-step install guide for Android.',
-    url: '/dhan77-apk-download',
-    siteName: 'Dhan7.xyz',
+    title: 'Dhan7 APK Download (Latest Version 2026)',
+    description: 'Download Dhan7 APK safely. Step-by-step install guide for Android.',
+    url: '/dhan7-apk-download',
+    siteName: 'Dhan7',
     type: 'website',
-    images: [{ url: '/dhan7.jpg', width: 512, height: 512, alt: 'Dhan7 Logo' }],
+    images: [{ url: '/dhan77-logo.png', width: 512, height: 512, alt: 'Dhan7 Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dhan77 APK Download (Latest Version 2026)',
-    description: 'Download Dhan77 APK safely. Step-by-step install guide for Android.',
-    images: ['/dhan7.jpg'],
+    title: 'Dhan7 APK Download (Latest Version 2026)',
+    description: 'Download Dhan7 APK safely. Step-by-step install guide for Android.',
+    images: ['/dhan77-logo.png'],
   },
 }
 
@@ -86,9 +86,9 @@ export default function DownloadPage() {
         <p className="text-(--color-text-muted) text-sm">Also see</p>
         <div className="flex flex-wrap gap-3">
           {[
-            { href: '/dhan77-login', label: 'Login Guide' },
-            { href: '/dhan77-bonus', label: 'Bonus Offers' },
-            { href: '/dhan77-review', label: 'App Review' },
+            { href: '/dhan7-login', label: 'Login Guide' },
+            { href: '/dhan7-bonus', label: 'Bonus Offers' },
+            { href: '/dhan7-review', label: 'App Review' },
             { href: '/faq', label: 'FAQ' },
             { href: '/blog', label: 'Blog' },
           ].map(({ href, label }) => (

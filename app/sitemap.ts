@@ -7,14 +7,14 @@ const SITE_URL = siteUrl();
 const LAST_MODIFIED = new Date("2026-03-24T00:00:00.000Z");
 
 const CORE_ROUTES = [
-  { path: "/", changeFrequency: "daily" as const, priority: 1 },
-  { path: "/dhan77-apk-download", changeFrequency: "daily" as const, priority: 0.95 },
-  { path: "/dhan77-bonus", changeFrequency: "weekly" as const, priority: 0.9 },
-  { path: "/dhan77-login", changeFrequency: "weekly" as const, priority: 0.88 },
-  { path: "/dhan77-review", changeFrequency: "weekly" as const, priority: 0.86 },
-  { path: "/faq", changeFrequency: "monthly" as const, priority: 0.75 },
-  { path: "/blog", changeFrequency: "weekly" as const, priority: 0.84 },
-];
+  { path: '', changeFrequency: 'daily' as const, priority: 1.0 },
+  { path: '/dhan7-apk-download', changeFrequency: 'daily' as const, priority: 0.95 },
+  { path: '/dhan7-login', changeFrequency: 'weekly' as const, priority: 0.90 },
+  { path: '/dhan7-bonus', changeFrequency: 'weekly' as const, priority: 0.90 },
+  { path: '/dhan7-review', changeFrequency: 'weekly' as const, priority: 0.85 },
+  { path: '/faq', changeFrequency: 'weekly' as const, priority: 0.80 },
+  { path: '/blog', changeFrequency: 'daily' as const, priority: 0.85 },
+] as const
 
 function buildLanguageAlternates(path: string) {
   const url = `${SITE_URL}${path}`;

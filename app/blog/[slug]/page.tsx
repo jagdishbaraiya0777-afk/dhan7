@@ -24,8 +24,26 @@ export async function generateMetadata({
   const post = await getPostBySlug(slug)
   if (!post) return {}
   return {
-    title: post.meta_title,
+    title: `${post.meta_title} | Dhan7`,
     description: post.meta_description,
+    keywords: post.keywords,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
+    openGraph: {
+      title: `${post.meta_title} | Dhan7`,
+      description: post.meta_description,
+      url: `/blog/${slug}`,
+      siteName: 'Dhan7',
+      type: 'article',
+      images: [{ url: '/dhan77-logo.png', width: 512, height: 512, alt: post.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.meta_title,
+      description: post.meta_description,
+      images: ['/dhan77-logo.png'],
+    },
   }
 }
 
@@ -126,9 +144,10 @@ export default async function BlogPostPage({
         <div className="flex flex-wrap gap-3">
           {[
             { href: '/blog', label: '← All Posts' },
-            { href: '/dhan77-apk-download', label: 'APK Download' },
-            { href: '/dhan77-login', label: 'Login Guide' },
-            { href: '/dhan77-bonus', label: 'Bonus Offers' },
+            { href: '/dhan7-apk-download', label: 'APK Download' },
+            { href: '/dhan7-login', label: 'Login Guide' },
+            { href: '/dhan7-bonus', label: 'Bonus Offers' },
+            { href: '/dhan7-review', label: 'App Review' },
             { href: '/faq', label: 'FAQ' },
           ].map(({ href, label }) => (
             <Link
